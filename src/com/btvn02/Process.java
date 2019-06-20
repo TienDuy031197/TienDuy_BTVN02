@@ -32,6 +32,8 @@ public class Process {
 				s = s.replaceAll(Constant.REGEX_REPLACE, " ");
 				putMap(s);
 			}
+			fr.close();
+			br.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
