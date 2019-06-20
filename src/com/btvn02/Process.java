@@ -29,7 +29,7 @@ public class Process {
 			br = new BufferedReader(fr);
 			String s;
 			while ((s = br.readLine()) != null) {
-				s = s.replaceAll("\\W+", " ");
+				s = s.replaceAll(Constant.REGEX_REPLACE, " ");
 				putMap(s);
 			}
 		} catch (FileNotFoundException e) {
@@ -44,7 +44,7 @@ public class Process {
 	}
 
 	private void putMap(String content) {
-		String arr[] = content.split("\\s+");
+		String arr[] = content.split(Constant.REGEX_SPLIT);
 		String key;
 		int value;
 		for (int i = 0; i < arr.length; i++) {
