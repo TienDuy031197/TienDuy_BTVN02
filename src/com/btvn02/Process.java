@@ -51,7 +51,6 @@ public class Process {
 				// TODO: handle exception
 			}
 		}
-		// return content;
 
 	}
 
@@ -90,10 +89,10 @@ public class Process {
 		for (Map.Entry<String, Integer> entry : listSave) {
 			sortMap.put(entry.getKey(), entry.getValue());
 		}
-		inDanhSach(sortMap);
+		printInfo(sortMap);
 	}
 
-	private void inDanhSach(Map<String, Integer> a) {
+	private void printInfo(Map<String, Integer> a) {
 		System.out.println("Danh sach cac tu xuat hien va tan xuat hien: ");
 		for (String key : a.keySet()) {
 			System.out.println("Tu: " + key + " - Xuat hien: " + a.get(key));
